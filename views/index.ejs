@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <%- include('partials/head') %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/banner') %>
+    <center>
+        <form action="/save" method="post">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" ><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" ><br><br>
+            <input type="submit" value="save">
+        </form>
+        <a href="/list">lists</a>
+    </center>
+    <%- include('partials/shop') %>
+
+    <!-- <center>
+        <form action="/prod_save" method="post">
+            <label for="prodIMG">Product Image:</label><br>
+            <input type="file" id="prodIMG" name="prodIMG" ><br>
+            <label for="prodName">Product Name:</label><br>
+            <input type="text" id="prodName" name="prodName" ><br>
+            <label for="prodPrice">Product Price:</label><br>
+            <input type="text" id="prodPrice" name="prodPrice" ><br><br>
+            <input type="submit" value="save">
+        </form>
+        <a href="/prod_list">lists</a>
+    </center> -->
+
+    <%- include('partials/week_deals') %>
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+</body>
+</html>

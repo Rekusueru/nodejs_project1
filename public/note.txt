@@ -1,0 +1,1 @@
+paste mo dito sa public yung mga need nung href attributes like css, js, images, etc folders mula sa nachop-chop

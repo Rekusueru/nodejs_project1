@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <%- include('partials/head') %>
+    <title>Lists</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/banner') %>
+    <center>
+    <table border="2" style="text-align: center; ">
+        <tr>
+            <th>Photo</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Action</th>
+        </tr>
+        <% users.forEach(you =>{ %>
+            <tr>
+                <td></td>
+                <td><%= you.first_name %></td>
+                <td><%= you.last_name %></td>
+                <td>
+                    <a href="/delete/<%= you.id %>">Delete</a>
+                    <a href="/edit/<%= you.id %>">Edit</a>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+    <a href="/">add user</a>
+    </center>
+
+
+    <!-- <center>
+        <table border="2">
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Action</th>
+            </tr>
+            <% users.forEach(you =>{ %>
+                <tr>
+                    <td><%= you.product_img %></td>
+                    <td><%= you.product_name %></td>
+                    <td><%= you.product_price %></td>
+                    <td>
+                        <a href="/prod_delete/<%= you.product_id %>">Delete</a>
+                        <a href="/prod_edit/<%= you.product_id %>">Edit</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </table>
+        <a href="/">add product</a>
+    </center> -->
+
+    <%- include('partials/week_deals') %>
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+</body>
+</html>
